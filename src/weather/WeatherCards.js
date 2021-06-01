@@ -5,8 +5,8 @@ import '../weather/weatherCard.css';
 
 
 class WeatherCards extends React.Component {
-    constructor(props) {
-        super(props); 
+    // constructor() {
+    //     super(); 
     }
 
 render() {

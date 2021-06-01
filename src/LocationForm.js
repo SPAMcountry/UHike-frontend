@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button'; 
+import Button from './react-bootstrap/Button'; 
 import WeatherCards from './weather/WeatherCards'; 
 import './location.css'
 
 
 class LocationForm extends React.Component{ 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     this.state = {
         data: [],
         weather: [],

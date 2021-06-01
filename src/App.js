@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import Weather from './Weather';
 
 class App extends React.Component {
-  constructor() {
-    super(); 
+  // constructor() {
+  //   super(); 
   }
 
 
