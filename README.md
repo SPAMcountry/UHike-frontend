@@ -1,1 +1,0 @@
-# UHike-frontend
