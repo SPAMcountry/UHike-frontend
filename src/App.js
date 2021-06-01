@@ -1,23 +1,22 @@
-import React from 'react';
-import axios from 'axios';
-import Form from 'react-bootstrap/Button';
-
-import LocationForm from './LocationForm';
-
+import React from 'react'; 
 import './App.css';
+import LocationForm from './LocationForm'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import Weather from './Weather';
 
 class App extends React.Component {
   constructor() {
-    super();
+    super(); 
   }
-}
 
-render() {
-  return (
-    <div className="App">
-      <LocationForm />
-    </div>
-  )
-}
 
+  render()  { 
+    return (
+      <div className="App">
+        <LocationForm /> 
+      </div>
+    );
+  }
+
+}
 export default App;
