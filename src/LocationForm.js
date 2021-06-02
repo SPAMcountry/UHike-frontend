@@ -5,7 +5,7 @@ import Button from './react-bootstrap/Button';
 import WeatherCards from './weather/WeatherCards'; 
 import './location.css'
 
-
+const PORT  = 'http://localhost:3050'
 class LocationForm extends React.Component{ 
     constructor(props) {
         super(props);
@@ -16,24 +16,26 @@ class LocationForm extends React.Component{
         }
     }
 
-componentDidMount = () => {
-    this.getLocation();
-}     
+// componentDidMount = () => {
+//     this.getLocation();
+// }     
 getLocation = async (e) => {
-    let response = await axios.get(`http://localhost:3050/location?search=${this.state.search}`)
+    let response = await axios.get(`${PORT}/location?search=${this.state.search}`)
     .then(response => {
         this.setState({data: response.data[0]})
+        console.log(response.data)
         this.getWeather() 
     })
-    console.log(response); 
+    console.log(response, 'this is location response'); 
 }
 getWeather = async (e) => {
-    let response = await axios.get(`http://localhost:3050/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`)
+    let response = await axios.get(`${PORT}/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`)
+        console.log('this is weather response');
         this.setState({weather: response.data});
 }
 
 render() {
-
+console.log(this.state, 'this is the state log')
     return(
         
         <div id="formSearchLoc">
@@ -45,7 +47,7 @@ render() {
             <div>{this.state.data.display_name ? <div>{this.state.data.display_name}, {this.state.data.lat},{this.state.data.lon}</div> : ''}</div>
             </Form.Text>
             <div>
-                {this.state.weather.map(item => { return <WeatherCards date={item.date} description ={item.description}/> })}
+                {this.state.weather.map(item => { return <WeatherCards icon={item.icon} iconCode={item.iconCode} date={item.date} description ={item.description}/> })}
             </div>             
         </Form>
         </div>

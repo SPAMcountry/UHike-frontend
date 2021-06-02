@@ -16,6 +16,7 @@ render() {
             <Card.Body>
             <Card.Title>{this.props.date}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
+            <img src={`https://www.weatherbit.io/static/img/icons/${this.props.icon}.png`} alt ={'weatherPic'}/>
             </Card.Body> 
         </Card>
         </div>
