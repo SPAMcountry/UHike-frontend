@@ -18,7 +18,7 @@ saveTrail = async (e, item) => {
     .then(tokenData =>{
         const jwt = tokenData.__raw;
         const requestConfig = {
-            headers:{'Authorization': `Bearer${jwt}`},
+            headers:{'Authorization': `Bearer ${jwt}`},
             method: 'post',
             baseURL: 'http://localhost:3050',
             url: '/trail',
