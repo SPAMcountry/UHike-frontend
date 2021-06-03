@@ -6,11 +6,7 @@ import Carousel from 'react-bootstrap/Carousel';
 class TrailCards extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = {
-            savedTrail: '',
-
-
-        }
+        
     }
 saveTrail = (item) => {
 //  this.setState({savedTrail: })
@@ -22,7 +18,7 @@ render() {
             <Carousel fade> 
             {this.props.trailsData.map(item => (
                 item.thumbnail ? 
-                <Carousel.Item interval={3000} onClick={this.saveTrail}> 
+                <Carousel.Item interval={3000} > 
             <img 
             width='300px'
             height='400px'
