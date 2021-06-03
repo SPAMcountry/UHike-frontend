@@ -58,6 +58,11 @@ const options = {
         console.error(error);
     });
 }
+saveTrail = (item) => {
+    
+     console.log(item);
+    }
+
 getInsta = async (e) => {
 const options = {
     method: 'GET',
