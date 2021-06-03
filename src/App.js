@@ -48,13 +48,10 @@ render() {
           <Header isAuthenticated={isAuthenticated}/>
           <Switch>
             <Route exact path="/">
-              {/* TODO: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
               {this.props.auth0.isAuthenticated ? <LocationForm />: null }
             </Route>
             <Route exact path="/trails">
-            {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
             {this.props.auth0.isAuthenticated ?  <Profile userInfo={user}/>: null }
-            {/* <LogoutButton /> */}
             </Route>
           </Switch>
           <Footer />
