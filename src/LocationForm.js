@@ -89,7 +89,7 @@ console.log(this.state.name, 'this is the state log')
                 <TrailCards styl={{width: '300px'}}trailsData={this.state.trails}/>
             </div>      
             <div>
-                {this.state.weather.map(item => { return <WeatherCards icon={item.icon} iconCode={item.iconCode} date={item.date} description ={item.description}/> })}
+                <WeatherCards weatherData={this.state.weather}/> 
             </div>       
         </Form>
         </div>
