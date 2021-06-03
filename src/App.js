@@ -7,10 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component {
   // constructor() {
   //   super(); 
-  }
+  // }
 
 
-  render()  { 
+  render() { 
     return (
       <div className="App">
         <LocationForm /> 

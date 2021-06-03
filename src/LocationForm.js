@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-import Button from './react-bootstrap/Button'; 
+import Button from 'react-bootstrap/Button'; 
 import WeatherCards from './weather/WeatherCards'; 
 import './location.css'
 import TrailCards from './trails/trailCards';
+console.log(process.env.REACT_APP_TRAIL_API);
 
 const TRAIL_API = process.env.REACT_APP_TRAIL_API
 const PORT  = 'http://localhost:3050'
@@ -49,6 +50,7 @@ const options = {
         'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com'
     }
     };
+    console.log(options);
     await axios.request(options).then(response => {
         console.log(response.data, 'from trails response')
         this.setState({trails: response.data.data});

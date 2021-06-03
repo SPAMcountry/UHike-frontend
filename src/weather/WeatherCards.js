@@ -6,9 +6,9 @@ import '../weather/weatherCard.css';
 
 
 class WeatherCards extends React.Component {
-    // constructor() {
-    //     super(); 
-    }
+     // constructor() {
+     //     super(); 
+    // }
 
 render() {
     return (
