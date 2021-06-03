@@ -31,7 +31,7 @@ getLocation = async (e) => {
         console.log(response.data)
         this.getWeather(); 
         this.getTrail();
-        this.getInsta();
+        // this.getInsta();
     })
     console.log(response, 'this is location response'); 
 }
@@ -63,25 +63,25 @@ saveTrail = (item) => {
      console.log(item);
     }
 
-getInsta = async (e) => {
-const options = {
-    method: 'GET',
-    url: 'https://instagram47.p.rapidapi.com/search',
-    params: {search: this.state.search},
-    headers: {
-        'x-rapidapi-key': 'a941993572msh7b32a7b37e6aaa8p1c4490jsn2429594e3684',
-        'x-rapidapi-host': 'instagram47.p.rapidapi.com'
-    }
-    };
+// getInsta = async (e) => {
+// const options = {
+//     method: 'GET',
+//     url: 'https://instagram47.p.rapidapi.com/search',
+//     params: {search: this.state.search},
+//     headers: {
+//         'x-rapidapi-key': 'a941993572msh7b32a7b37e6aaa8p1c4490jsn2429594e3684',
+//         'x-rapidapi-host': 'instagram47.p.rapidapi.com'
+//     }
+//     };
     
-    axios.request(options).then(response => {
-        console.log(response.data, 'this is instagram');
-    }).catch(function (error) {
-        console.error(error);
-    });
-}
+//     axios.request(options).then(response => {
+//         console.log(response.data, 'this is instagram');
+//     }).catch(function (error) {
+//         console.error(error);
+//     });
+// }
 render() {
-console.log(this.state.name, 'this is the state log')
+console.log(this.state, 'this is the state log')
     return(
         
         <div id="formSearchLoc">
