@@ -8,9 +8,9 @@ import {withAuth0} from '@auth0/auth0-react';
 class TrailCards extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = {
-            trails: [],
-        }
+        // this.state = {
+        //     trails: [],
+        // }
     }
 saveTrail = async (e, item) => {
     e.preventDefault();
@@ -18,15 +18,16 @@ saveTrail = async (e, item) => {
     .then(tokenData =>{
         const jwt = tokenData.__raw;
         const requestConfig = {
-            headers:{'Authorization': `Bearer${jwt}`},
+            headers:{'Authorization': `Bearer ${jwt}`},
             method: 'post',
             baseURL: 'http://localhost:3050',
             url: '/trail',
-            params: {name: item.name}
+            params: {nameOfTrail: item.name, trailRegion: item.region,
+            trailRating: item.rating, trailThumbnail: item.thumbnail}
         }
         axios(requestConfig)
         .then(response => {
-            this.setState({trails: response.data}, () => console.log(response.data))
+            this.setState({trail: response.data}, () => console.log(response.data))
         })
         .catch(err => console.error(err))
     })
