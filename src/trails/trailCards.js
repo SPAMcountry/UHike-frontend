@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import {withAuth0} from '@auth0/auth0-react';
 
 
-const PORT = process.env.REACT_APP_SERVER; 
+
 class TrailCards extends React.Component {
     constructor(props) {
         super(props); 
@@ -20,7 +20,7 @@ saveTrail = async (e, item) => {
         const requestConfig = {
             headers:{'Authorization': `Bearer ${jwt}`},
             method: 'post',
-            baseURL: {PORT},
+            baseURL: process.env.REACT_APP_SERVER,
             url: '/trail',
             params: {nameOfTrail: item.name, trailRegion: item.region,
             trailRating: item.rating, trailThumbnail: item.thumbnail}
@@ -35,14 +35,14 @@ saveTrail = async (e, item) => {
 }
 render() {
     return (
-        <div id= "trailCards">
-            <Carousel fade> 
+        <div>
+            <Carousel nextIcon={<span aria-hidden="true" />} prevIcon={<span aria-hidden="true" />} fade> 
             {this.props.trailsData.map(item => (
                 item.thumbnail ? 
                 <Carousel.Item interval={3000} onClick={(e) => this.saveTrail(e, item)}> 
             <img 
-            width='300px'
-            height='400px'
+            style={{filter: 'brightness(60%)'}}
+            height='600px'
             className='d-block w-100'
             src={item.thumbnail}
             alt={item.name}

@@ -9,7 +9,7 @@ import {withAuth0} from '@auth0/auth0-react';
 class Login extends React.Component {
   render() {
     return(
-      <Card style={{ width: '18rem' }}>
+      <Card bg='secondary' style={{ marginRight: '40%', width: '18rem' }}>
         <Card.Body>
           <Card.Title>Log In</Card.Title>
           <Card.Text>

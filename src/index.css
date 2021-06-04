@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('https://www.themandagies.com/wp-content/uploads/2017/01/Cape-Flattery-Jan.-2017-54.jpg') no-repeat;
+  /* background: url('https://media0.giphy.com/media/4HmjAbzArpLqYvwWYb/giphy.gif?cid=ecf05e47240fms026vhxjamjzdnjzvosg99i4wn3b0pyjqqd&rid=giphy.gif&ct=g') no-repeat;
   background-size:cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 code {
