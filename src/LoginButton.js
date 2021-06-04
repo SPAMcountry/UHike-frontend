@@ -2,13 +2,13 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
 import {useAuth0} from '@auth0/auth0-react';
-
+import Button from 'react-bootstrap/Button';
 
 function LoginButton() {
   const {isAuthenticated, loginWithRedirect} = useAuth0();
 
   return !isAuthenticated && (
-    <button onClick={loginWithRedirect}>Log In</button>
+    <Button onClick={loginWithRedirect}>Log In</Button>
   );
 }
 

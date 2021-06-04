@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Merriweather&display=swap');
 .card{
     margin: auto;
     text-align: center;
     display:flex;
     justify-content: center;
   
+  }
+  #cardBodyText{
+    font-family: 'Mate SC', serif;
+  }
+  #h1TagFont{
+    font-family: 'Merriweather', serif;
   }

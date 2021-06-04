@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mate+SC&family=Merriweather&display=swap');
 
 #formSearchLoc{
-font-family: 'Caveat', cursive;
+font-family: 'Bebas Neue', cursive;
 animation: fadeIn 3s; 
 }
 
 @keyframes fadeIn {
     0% {opacity:0;}
     100%{opacity:1;}
+}
+body{
+    background: url('https://media0.giphy.com/media/4HmjAbzArpLqYvwWYb/giphy.gif?cid=ecf05e47240fms026vhxjamjzdnjzvosg99i4wn3b0pyjqqd&rid=giphy.gif&ct=g') no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
 }

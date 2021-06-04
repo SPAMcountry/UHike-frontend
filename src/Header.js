@@ -10,12 +10,11 @@ import {withAuth0} from '@auth0/auth0-react'
 class Header extends React.Component {
   render() {
     return(
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar fixed="top" id="navBar" collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand>UHike</Navbar.Brand>
-        <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
-        {this.props.auth0.isAuthenticated ? <LogoutButton/> : <Login/>}
-        {/* TODO: if the user is logged in, render the `LogoutButton` - if the user is logged out, render the `LoginButton` */}
+        <Link style={{margin:'10px'}} to="/">Home</Link>
+        <Link style={{margin:'10px'}} to="/profile">Profile</Link>
+        {this.props.auth0.isAuthenticated ? <LogoutButton style={{margin:'10px'}} /> : <Login/>}
       </Navbar>
     );
   }
