@@ -15,7 +15,6 @@ class Header extends React.Component {
         <Link style={{margin:'10px'}} to="/">Home</Link>
         <Link style={{margin:'10px'}} to="/profile">Profile</Link>
         {this.props.auth0.isAuthenticated ? <LogoutButton style={{margin:'10px'}} /> : <Login/>}
-        {/* TODO: if the user is logged in, render the `LogoutButton` - if the user is logged out, render the `LoginButton` */}
       </Navbar>
     );
   }

@@ -22,9 +22,7 @@ class LocationForm extends React.Component{
         }
     }
 
-// componentDidMount = () => {
-//     this.getLocation();
-// }     
+
 getLocation = async (e) => {
     let response = await axios.get(`${PORT}/location?search=${this.state.search}`)
     .then(response => {
@@ -61,23 +59,7 @@ const options = {
 }
 
 
-// getInsta = async (e) => {
-// const options = {
-//     method: 'GET',
-//     url: 'https://instagram47.p.rapidapi.com/search',
-//     params: {search: this.state.search},
-//     headers: {
-//         'x-rapidapi-key': 'a941993572msh7b32a7b37e6aaa8p1c4490jsn2429594e3684',
-//         'x-rapidapi-host': 'instagram47.p.rapidapi.com'
-//     }
-//     };
-    
-//     axios.request(options).then(response => {
-//         console.log(response.data, 'this is instagram');
-//     }).catch(function (error) {
-//         console.error(error);
-//     });
-// }
+
 render() {
 console.log(this.state, 'this is the state log')
     return(
