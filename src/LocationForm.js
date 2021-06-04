@@ -8,7 +8,7 @@ import TrailCards from './trails/trailCards';
 console.log(process.env.REACT_APP_TRAIL_API);
 
 const TRAIL_API = process.env.REACT_APP_TRAIL_API
-const PORT  = 'http://localhost:3050'
+const PORT  = process.env.REACT_APP_SERVER;
 class LocationForm extends React.Component{ 
     constructor(props) {
         super(props);
