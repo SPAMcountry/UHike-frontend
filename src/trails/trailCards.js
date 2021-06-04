@@ -28,6 +28,7 @@ saveTrail = async (e, item) => {
         axios(requestConfig)
         .then(response => {
             this.setState({trail: response.data}, () => console.log(response.data))
+            alert("Saved. Check your profile for saved trails.")
         })
         .catch(err => console.error(err))
     })
