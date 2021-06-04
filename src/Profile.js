@@ -11,7 +11,7 @@ import CardColumns from 'react-bootstrap/CardColumns'
 import Carousel from 'react-bootstrap/Carousel'
 
 
-const PORT = 'http://localhost:3050'
+const PORT = 'https://uhike.herokuapp.com'
 class Profile extends React.Component{
 constructor(){
     super(); 
