@@ -19,21 +19,32 @@ class App extends React.Component {
   // constructor() {
   //   super(); 
   // }
-componentDidMount = () => {
+componentDidUpdate = () => {
   if(this.props.auth0.isAuthenticated) { 
     this.props.auth0.getIdTokenClaims()
     .then(res => {
       const jwt = res.__raw;
-
-      const config = {
-        header: {"Authorization" : `Bearer ${jwt}`},
-        method: 'get',
-        baseURL: process.env.REACT_APP_SERVER, 
-        url: '/trails'
+      const config ={
+        headers: {"Authorization" : `Bearer ${jwt}`},
+        method: 'post', 
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/users'
       }
       axios(config)
-      .then(axiosResults => console.log(axiosResults.data))
+        .then(res2 => {
+          console.log(res2)
+        //   const config2 = {
+        //   header: {"Authorization" : `Bearer ${jwt}`},
+        //   method: 'get',
+        //   baseURL: process.env.REACT_APP_SERVER, 
+        //   url: '/trails'
+        // }
+        // axios(config2)
+        // .then(axiosResults => console.log(axiosResults.data))
+        // .catch(err => console.error(err)); 
+      })
       .catch(err => console.error(err)); 
+      
     })
   }
 }
@@ -50,7 +61,7 @@ render() {
             <Route exact path="/">
               {this.props.auth0.isAuthenticated ? <LocationForm />: null }
             </Route>
-            <Route exact path="/trails">
+            <Route exact path="/profile">
             {this.props.auth0.isAuthenticated ?  <Profile userInfo={user}/>: null }
             </Route>
           </Switch>

@@ -59,24 +59,6 @@ const options = {
     });
 }
 
-
-// getInsta = async (e) => {
-// const options = {
-//     method: 'GET',
-//     url: 'https://instagram47.p.rapidapi.com/search',
-//     params: {search: this.state.search},
-//     headers: {
-//         'x-rapidapi-key': 'a941993572msh7b32a7b37e6aaa8p1c4490jsn2429594e3684',
-//         'x-rapidapi-host': 'instagram47.p.rapidapi.com'
-//     }
-//     };
-    
-//     axios.request(options).then(response => {
-//         console.log(response.data, 'this is instagram');
-//     }).catch(function (error) {
-//         console.error(error);
-//     });
-// }
 render() {
 console.log(this.state, 'this is the state log')
     return(
@@ -90,7 +72,7 @@ console.log(this.state, 'this is the state log')
             <div>{this.state.data.display_name ? <div>{this.state.data.display_name}, {this.state.data.lat},{this.state.data.lon}</div> : ''}</div>
             </Form.Text>
             <div>
-                <TrailCards styl={{width: '300px'}}trailsData={this.state.trails}/>
+                <TrailCards style={{width: '300px'}}trailsData={this.state.trails}/>
             </div>      
             <div>
                 <WeatherCards weatherData={this.state.weather}/> 
