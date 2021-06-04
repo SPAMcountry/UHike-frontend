@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import {withAuth0} from '@auth0/auth0-react';
 
 
-
+const PORT = process.env.REACT_APP_SERVER; 
 class TrailCards extends React.Component {
     constructor(props) {
         super(props); 
@@ -20,7 +20,7 @@ saveTrail = async (e, item) => {
         const requestConfig = {
             headers:{'Authorization': `Bearer ${jwt}`},
             method: 'post',
-            baseURL: 'http://localhost:3050',
+            baseURL: {PORT},
             url: '/trail',
             params: {nameOfTrail: item.name, trailRegion: item.region,
             trailRating: item.rating, trailThumbnail: item.thumbnail}
