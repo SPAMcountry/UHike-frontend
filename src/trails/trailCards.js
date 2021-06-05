@@ -8,9 +8,9 @@ import {withAuth0} from '@auth0/auth0-react';
 class TrailCards extends React.Component {
     constructor(props) {
         super(props); 
-        // this.state = {
-        //     trails: [],
-        // }
+        this.state = {
+            trail: [],
+        }
     }
 saveTrail = async (e, item) => {
     e.preventDefault();
