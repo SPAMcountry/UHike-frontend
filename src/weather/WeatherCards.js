@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns'
 import '../weather/weatherCard.css'; 
 import Carousel from 'react-bootstrap/Carousel'
 
